@@ -7,6 +7,12 @@
     .left{
         width: 100px;
     }
+    .img_block button {
+        margin: 0 0 0 0
+    }
+    .media_img{
+        margin-left:0
+    }
 }
 
 @media all and (max-width: 850px) {
@@ -52,6 +58,14 @@
 
     align-items: center;
         margin: 20px 20px;
+    }
+
+    .img_block button {
+       margin: 10px 0 10px 35px
+    }
+
+    .media_img{
+        margin-left:38%
     }
 
 

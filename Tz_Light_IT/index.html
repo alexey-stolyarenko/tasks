@@ -25,13 +25,13 @@
             </div>
         </div>
     </div>
-<div class="flex_block noDisplay">
+<div class="flex_block ">
     <div class="img_block"></div>
-    <div class="left  "><h4 class="text_decor" >Last</h4></div>
-   <div class="left"> <h4 class="text_decor" >First</h4></div>
-    <div class="left"><h4 class="text_decor" >Username</h4></div>
-    <div class="left"><h4 class="text_decor" >Phone</h4></div>
-   <div class="left"><h4 class="text_decor">Location</h4></div>
+    <div class="left  noDisplay"><h4 class="text_decor" >Last</h4></div>
+   <div class="left noDisplay"> <h4 class="text_decor" >First</h4></div>
+    <div class="left noDisplay"><h4 class="text_decor" >Username</h4></div>
+    <div class="left noDisplay"><h4 class="text_decor" >Phone</h4></div>
+   <div class="left noDisplay"><h4 class="text_decor">Location</h4></div>
     <div class="img_block">
         <input find-key  ng-keyup="findKey(info)"  ng-model="info">
         <button id="findBtn" ng-click="findClick(info)" class="btn btn-primary">Find</button>
@@ -81,7 +81,7 @@
                         <div><p>Cell: {{item.cell}}</p></div>
                     </div>
                     <div>
-                        <img class=" img-circle" ng-src="{{item.picture.large}}" alt="middle">
+                        <img class=" media_img img-circle" ng-src="{{item.picture.large}}" alt="middle">
                     </div>
                 </div>
             </div>

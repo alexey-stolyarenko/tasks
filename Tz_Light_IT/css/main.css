@@ -63,9 +63,6 @@ h4, h5{
     outline: none;
 }
 
-
-
-
 .main_display_block{
     display: flex;
     max-width: 1300px;
@@ -74,9 +71,6 @@ h4, h5{
     margin: auto;
     justify-content: space-around;
     flex-direction: row;
-
-
-
 }
 
 .display_block {
@@ -84,7 +78,6 @@ h4, h5{
     flex-direction: column;
     padding-top:10px;
 }
-
 
 .float_img img{
     border:0
@@ -117,11 +110,6 @@ h4, h5{
     background-color: #c9d0d6;
     text-align: center;
 }
-
-
-
-
-
 
 .panel-default > .panel-heading {
     background-color: #c9d0d6;
