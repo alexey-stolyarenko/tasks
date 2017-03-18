@@ -52,6 +52,6 @@ var app = angular.module('angularApp',[]);
 
 $scope.findClick = function (info) {
     $('.panel-default').hide();
-    $("h5:contains(" + info +")").closest('.panel-default').show();
+    $("h5:contains(" + info.toLowerCase() +")").closest('.panel-default').show();
 }
     });

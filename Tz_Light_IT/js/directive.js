@@ -7,11 +7,11 @@ app.directive('findKey',function () {
                     else {
                         if (e.keyCode == 8 || e.keyCode == 46) {
                             $('.panel-default').hide();
-                            $("h5:contains(" + $('input').eq(0).val() + ")").closest('.panel-default').show();
+                            $("h5:contains(" + $('input').eq(0).val().toLowerCase() + ")").closest('.panel-default').show();
                         }
                         if (e.keyCode == 13) {
                             $('.panel-default').hide();
-                            $("h5:contains(" + $('input').eq(0).val() + ")").closest('.panel-default').show();
+                            $("h5:contains(" + $('input').eq(0).val().toLowerCase() + ")").closest('.panel-default').show();
                         }
                     }
                 }
