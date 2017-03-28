@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html ng-app="angularApp">
+<head>
+    <script src="libr/jquery.js"></script>
+    <script src="libr/angular.js"></script>
+
+    <script src="libr/bootstrap.js"></script>
+    <link rel="stylesheet" href="libr/bootstrap.css">
+    <script src="app/app.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body ng-controller="angularCtrl">
+
+<header>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed my_btn" data-toggle="collapse" data-target="#myMenu">
+                        <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+                    </button>
+
+
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse " id="myMenu">
+                    <ul class="menu">
+                        <li class="left"  ng-repeat="item in getData"  ng-click="viewFunction(item)"><a href="#" ><div  class="border_div">{{item.title}}</div></a>
+
+                        </li>
+                        <li data-toggle="modal" data-target="#registrationModal" data-whatever="@mdo"><a href="#" ><div class="border_div">{{aboutUser.reg}}</div></a></li>
+                        <li data-toggle="modal" data-target="#autorizationModal" data-whatever="@getbootstrap"><a href="#"><div class="border_div">{{aboutUser.aut}}</div></a></li>
+
+
+                    </ul>
+                </div>
+
+                <div class="header_line"></div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+<button class="btn btn-danger center-block" ng-click="getFunction()">ClickForGet</button>
+<br>
+
+
+
+
+
+
+
+<section ng-if="showProducts == 'true'">
+    <ng-include src = "'view/view.html'"></ng-include>
+</section>
+
+
+<form name="formAutorization" novalidate ng-submit="autorization(aboutUser)">
+<div class="modal fade" id="autorizationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4>Autorization</h4>
+                    <div class="user_info">
+                    <p>{{aboutUser.access}}</p>
+                    </div>
+                </div>
+                <div class="model-body">
+                <div class="form-group">
+                    <label for="UserName">User Name</label>
+                    <input required ng-model="aboutUser.userName" type="text" class="form-control" id="userName" placeholder="User Name">
+
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input required ng-model="aboutUser.password" type="password" class="form-control" id="userPassword" placeholder="Password">
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button ng-click="updateAccess()" id="submit1" ng-disabled="formAutorization.$invalid" type="submit" class="btn btn-default">Submit</button>
+                    <button ng-click="updateAccess()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</form>
+
+
+
+
+
+<form  name="formRegistration" novalidate ng-submit="addNewUser(aboutUser)">
+    <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h4>Registration</h4>
+                        <div class="user_info">
+
+                            <p> {{aboutUser.access}}</p>
+                            <p>{{aboutUser.message}}</p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="model-body">
+                        <div class="form-group">
+                            <label for="UserName">User Name</label>
+                            <input required ng-model="aboutUser.userName" type="text" class="form-control" id="userNameReg" placeholder="User Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="userPassword">Password</label>
+                            <input required ng-model = "aboutUser.password"  type="password" class="form-control" id="userPasswordReg" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button ng-click="updateAccess()"   id="submit" ng-disabled="formRegistration.$invalid" type="submit" class="btn btn-default">Submit</button>
+                        <button data-dismiss="modal" ng-click="updateAccess()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="test" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="model-body">
+                        <div class="form-group">
+                            <h3>Your Name :</h3>
+                            <h4>{{aboutUser.aut}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <h3>Your password :</h3>
+                            <h4>{{aboutUser.password}}</h4>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
