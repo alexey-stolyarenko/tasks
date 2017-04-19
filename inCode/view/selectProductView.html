@@ -24,7 +24,7 @@
                 <div class="col-xs-6">
                     <div class="prod-content">
                         <p>Цена: <span>{{item.productPrice}}</span></p>
-                        <p>Количество: <input ng-model="itemDirectiveCtrl.selectCount" type="text" maxlength="4"></p>
+                        <p>Количество: <input ng-model="itemDirectiveCtrl.selectCount" type="number" min="1" maxlength="4"></p>
                         <button ng-click=itemDirectiveCtrl.addSelectItem(item);mainPageCtrl.showTotalPrice()
                                 class="btn buy-btn">Купить
                         </button>
