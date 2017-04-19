@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3 col-sm-12">
+            <div class="prod-img">
+                <img ng-src={{item.productImg}}>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="prod-header">
+                        <h2>{{item.productName}}</h2>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="prod-content">
+                        <p class="sale">{{item.textSale}}</p>
+                        <p>Произвидитель: <span>{{item.manufacturer}}</span></p>
+                        <p>Упаковка: <span>{{item.package}}</span></p>
+                        <p>Наличие: <span>{{item.avail}}</span></p>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="prod-content">
+                        <p>Цена: <span>{{item.productPrice}}</span></p>
+                        <p>Количество: <input ng-model="itemDirectiveCtrl.selectCount" type="text" maxlength="4"></p>
+                        <button ng-click=itemDirectiveCtrl.addSelectItem(item);mainPageCtrl.showTotalPrice()
+                                class="btn buy-btn">Купить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

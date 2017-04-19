@@ -1,0 +1,43 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="logo">
+                    <a ui-sref="main">
+                        <h1 class="logo-hide">fresh fruits </h1>
+                        <span><i class="fa fa-pagelines" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="shop-cart">
+                    <div class="cart-item">
+                        <h4>Козина покупок</h4>
+                        <a ui-sref="basket">
+                            <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                    <div class="cart-more">
+                        <a ui-sref="basket">Товаров: {{mainPageCtrl.allCount}} ( {{mainPageCtrl.allPrice}} грн.)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div ng-repeat="item in mainPageCtrl.items" class="products_block">
+                <item-directive></item-directive>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

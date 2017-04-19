@@ -1,0 +1,112 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="logo">
+                    <a ui-sref="main">
+                        <h1 class="logo-hide">fresh fruits </h1>
+                        <span><i class="fa fa-pagelines" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="back-item">
+                    <a ui-sref="main">
+                        <span><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></span>
+                        <h4> К покупкам!</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="header_block">
+                <div class="row">
+                    <div class="col-md-4 col-sm-3 col-xs-4 col-md-offset-2 col-sm-offset-0">
+                        <p class="margin-left">Название товара</p>
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-3">Количество</div>
+                    <div class="col-md-2 col-sm-3 col-xs-2">Цена за ед.</div>
+                    <div class="col-md-2 col-sm-3 col-xs-3">Итого</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ng-repeat="item in basketCtrl.items" class="products_block_cart products_block">
+                <div class="row">
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                        <div class="prod-img-cart">
+                            <img ng-src={{item.productImg}}>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-3 col-xs-4">
+                        <div class="prod-content-cart">
+                            <p class="margin-left">{{item.productName}}, <span>{{item.package}}</span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-3">
+                        <div class="prod-content-cart">
+                            <input readonly value="{{item.count}}"> <span ng-click=basketCtrl.deleteItem(item)><i
+                                class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-2">
+                        <div class="prod-content-cart">
+                            <p>{{item.productPrice}} грн</span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-3">
+                        <div class="prod-content-cart cart-sum">
+                            <p>{{item.totalPrice}} грн</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="cart-price">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 col-sm-3 col-sm-offset-0 col-xs-4">
+                        <div class="prod-cart-price">
+                            <p class="margin-left">Cумма заказа:</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-3 col-xs-3 col-xs-offset-4">
+                        <div class="prod-cart-price">
+                            <p>{{basketCtrl.allPrice}} грн.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-8   col-xs-6 col-xs-offset-6">
+            <div class="prod-cart-button">
+                <button class="btn buy-btn buy-btn-large">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
