@@ -1,0 +1,123 @@
+@import "header.scss";
+@import "section_slider.scss";
+@import "slider.scss";
+@import "section_topGames.scss";
+@import "section_scroll-slider.scss";
+@import "section_about.scss";
+@import "footer.scss";
+@import "popup.scss";
+
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #252129;
+  font-family: 'Lato', sans-serif;
+  min-width: 320px;
+}
+
+/*global classes*/
+
+.container {
+  max-width: 1530px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.global-top-margin {
+  margin-top: 80px;
+  @media screen and (max-width: 575px) {
+    margin-top: 50px;
+  }
+}
+
+.global-top-padding {
+  padding-top: 90px;
+  @media screen and (max-width: 575px) {
+    padding-top: 60px;
+  }
+}
+
+.global-bottom-padding {
+  padding-bottom: 90px;
+  @media screen and (max-width: 575px) {
+    padding-bottom: 60px;
+  }
+}
+
+.btn-global-primary {
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    background-image: linear-gradient(to right, #ff7214, #ffb602, #ff7214, #ffb602);
+    background-size: 300% 100%;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 46px;
+    text-align: center;
+    transition: all ease-in-out .4s;
+    font-weight: 900;
+
+    @media screen and (max-width: 480px) {
+      cursor: default;
+    }
+
+    &:hover {
+      background-position: 100% 0;
+    }
+
+    @media screen and (max-width: 992px) {
+      line-height: 40px;
+    }
+  }
+}
+
+.btn-global-secondary {
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    background-image: linear-gradient(to right, #664480, #6E638A, #664480, #6E638A);
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 46px;
+    text-align: center;
+    background-size: 300% 100%;
+    transition: all ease-in-out .4s;
+    font-weight: 900;
+
+    @media screen and (max-width: 480px) {
+      cursor: default;
+    }
+
+    &:hover {
+      background-position: 100% 0;
+    }
+
+    @media screen and (max-width: 992px) {
+      line-height: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .padding-left-right-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+

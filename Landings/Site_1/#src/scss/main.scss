@@ -1,0 +1,68 @@
+/*@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";*/
+
+
+$font-family: "Red Hat Display", Sans-serif;
+$default-padding-global: 100px;
+
+
+.h2-title {
+  color: #0c0d1f;
+  font-family: $font-family;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.p-global{
+  color: #636477;
+  font-family: $font-family;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.59em;
+  letter-spacing: 0px;
+}
+
+.footer_menu_title-global {
+  color: #0c0d1f;
+  font-family: $font-family;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+}
+
+
+
+
+
+
+
+@import 'fonts.scss';
+@import 'header.scss';
+@import 'business.scss';
+@import 'slide_block.scss';
+@import 'owners_block.scss';
+@import 'popup.scss';
+@import 'resources_block.scss';
+@import 'request_block.scss';
+@import 'footer.scss';
+
+
+
+
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: PT Sans, Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+  word-spacing: normal;
+  max-width: 1920px;
+  min-width: 320px;
+  margin: auto;
+}
+
+

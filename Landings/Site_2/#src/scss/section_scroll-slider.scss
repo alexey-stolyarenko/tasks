@@ -1,0 +1,116 @@
+.scroll-slider_main {
+  background-image: url("../img/cover.jpg");
+  background-repeat: no-repeat;
+  width: auto;
+  background-attachment: fixed;
+  height: 490px;
+  background-position: 50% 50%;
+
+  @media screen and(min-width: 1921px) {
+    background-repeat: repeat-y;
+  }
+
+  @media screen and (max-width: 480px) {
+    background-image: url("../img/cover_mobile.jpg");
+    background-attachment: scroll;
+  }
+
+  .active {
+    opacity: 1 !important;
+  }
+}
+
+.scroll-slider_content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 490px;
+  align-items: center;
+
+  .scroll-slider_content_block_img {
+
+    img {
+      border: 3px solid #d08f1e;
+      border-radius: 50%;
+      @media screen and(max-width: 767px) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .scroll-slider_content_block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    padding-bottom: 35px;
+
+    @media screen and (max-width: 575px) {
+      margin-bottom: 40px;
+    }
+
+    .scroll-slider_content_block_name {
+      font-size: 18px;
+      color: rgb(255, 180, 0);
+      padding-top: 15px;
+      font-weight: 900;
+      @media screen and (max-width: 575px) {
+        padding-top: 25px;
+      }
+    }
+
+    p {
+      padding-top: 15px;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      line-height: 1.625;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 575px) {
+        height: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .scroll-slider_btn_block {
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      bottom: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      bottom: 50px;
+    }
+
+    .scroll-slider_btn_block_btn {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.18;
+      cursor: pointer;
+    }
+
+    .active_btn {
+      background-color: #ffb602;
+      opacity: 1;
+    }
+  }
+}
+
+
+

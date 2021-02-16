@@ -1,0 +1,87 @@
+:root {
+  --global-height: 566px;
+  --global-width: 2000px;
+
+  @media screen and (max-width: 992px) {
+    --global-height: 520px;
+  }
+
+  @media screen and (max-width: 767px) {
+    --global-height: 490px;
+  }
+
+  @media screen and (max-width: 575px) {
+    --global-height: 350px;
+  }
+
+}
+
+.slider_block_section {
+  flex-basis: 100%;
+  position: relative;
+  height: auto;
+}
+
+.slide_img {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 556px;
+  background-position: 50% 50%;
+  transition: all ease-in-out .5s;
+  opacity: 0;
+}
+
+.slider_block {
+  overflow: hidden;
+  position: relative;
+  max-width: var(--global-width);
+  margin: 0 auto;
+  height: var(--global-height);
+  display: flex;
+  justify-content: center;
+}
+
+.slider_btn_block {
+  margin-top: 77px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+  @media screen and (max-width: 992px) {
+    margin-top: 60px;
+  }
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+  }
+
+  @media screen and (max-width: 575px) {
+    margin-top: 35px;
+  }
+}
+
+.slider_btn_block_btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  left: 30px;
+  cursor: pointer;
+  opacity: 0.18;
+}
+
+.active {
+  opacity: 1 !important;
+  transition: all ease-in-out .3s !important;
+}
+
+.active_btn {
+  background-color: #ffb602;
+  opacity: 1;
+}

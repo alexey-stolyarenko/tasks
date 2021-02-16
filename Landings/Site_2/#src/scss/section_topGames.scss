@@ -1,0 +1,366 @@
+.topGames_title {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  @media screen and (max-width: 575px) {
+    font-size: 26px;
+  }
+}
+
+.topGames_tabs {
+  padding-top: 55px;
+  @media screen and (max-width: 575px) {
+    padding-top: 35px;
+  }
+}
+
+.topGames_tabs {
+
+  .topGames_tabs_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 41px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #433c48;;
+      z-index: 55;
+    }
+
+    .topGames_tabs_title_left {
+      display: flex;
+      flex-direction: row;
+
+      @media screen and (max-width: 575px) {
+        justify-content: center;
+        flex-basis: 100%;
+      }
+
+      span {
+        font-size: 16px;
+        color: rgb(196, 178, 211);
+        line-height: 1.5;
+        margin-left: 70px;
+        cursor: pointer;
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+          margin-left: 50px;
+        }
+
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+      }
+
+      .active_tab_btn {
+        color: #fff;
+
+        &:after {
+          content: "";
+          color: #fff;
+          position: absolute;
+          left: 0;
+          bottom: -16px;
+          height: 2px;
+          width: 100%;
+          background-color: #ffa008;
+          z-index: 55;
+        }
+      }
+    }
+
+    .topGames_tabs_title_right {
+
+      .splide__pagination {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        margin-right: 70px;
+        padding-top: 10px;
+
+        @media screen and (max-width: 768px) {
+          margin-right: 8px;
+        }
+
+        @media screen and (max-width: 575px) {
+          display: none;
+        }
+
+        button {
+          background-color: #fff;
+          opacity: 0.18;
+        }
+
+        .is-active {
+          transform: scale(1.1);
+          background-color: #8a7a98;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.topGames_slider {
+  padding-top: 50px;
+  position: relative;
+}
+
+.tab_view {
+  display: none;
+
+}
+
+.tab_view_active {
+  display: block;
+}
+
+.splide__slide {
+  width: 378px;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    width: 377px;
+  }
+
+  @media screen and (max-width: 575px) {
+    width: 310px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 280px;
+  }
+
+}
+
+.splide_last_img {
+  width: 100%;
+}
+
+.splide_content {
+  position: absolute;
+
+  &:hover {
+    .slide_btn_block {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .splide_sale:before, .splide_sale:after {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .slide_hover_cover {
+      display: block;
+    }
+  }
+
+  .splide_sale {
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 0;
+      width: 0;
+      height: 0;
+      border: 80px solid transparent;
+      border-top-color: #e52f44;
+      border-bottom: 0;
+      border-right: 0;
+      z-index: 3;
+      transition: .3s all ease-out;
+      opacity: 1;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 4;
+      top: 15px;
+      right: 7px;
+      font-size: 16px;
+      color: #fff;
+      transition: .3s all ease-out;
+      opacity: 1;
+    }
+
+    img {
+      @media screen and (max-width: 575px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .splide_sale-50 {
+    &:after {
+      content: '-50%';
+    }
+  }
+
+  .splide_sale-30 {
+    &:after {
+      content: '-30%';
+    }
+  }
+
+  .splide_sale_no {
+    &:before {
+      border: 0;
+    }
+  }
+
+  .slide_hover_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(90deg, rgba(24, 21, 26, 0.9) 0%, rgba(24, 21, 26, 0.25) 100%);
+    z-index: 2;
+    display: none;
+  }
+
+  .slide_btn_block {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    justify-content: center;
+    opacity: 0;
+    transition: all ease-out .3s;
+    bottom: 0;
+
+    .btn-global-primary {
+      flex-basis: 50%;
+
+      a {
+        width: 100%;
+      }
+    }
+
+    .btn-global-secondary {
+      flex-basis: 50%;
+
+      a {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.splide_content_text {
+  padding-top: 209px;
+  padding-left: 27px;
+  padding-right: 27px;
+  background-color: #18151a;
+  width: 377px;
+
+  @media screen and (max-width: 768px) {
+    width: 376px;
+  }
+
+  @media screen and (max-width: 575px) {
+    width: 309px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 185px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 279px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .splide_content_text_title {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 2.222;
+
+    @media screen and (max-width: 575px) {
+      font-size: 17px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 16px;
+    }
+  }
+
+  .splide_content_text_stars_prices {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+    .splide_content_text_stars {
+      display: flex;
+
+      img {
+        margin-left: 2px;
+      }
+
+      .margin_left-0 {
+        margin-left: 0;
+      }
+    }
+
+    .splide_content_text_prices {
+      display: flex;
+      align-items: center;
+
+
+      .splide_content_text_prices_left {
+        font-size: 14px;
+        color: rgb(138, 122, 152);
+        padding-right: 15px;
+
+      }
+
+      .splide_content_text_prices_right {
+        font-size: 20px;
+        color: rgb(255, 108, 132);
+        font-weight: 900;
+      }
+    }
+  }
+
+  .splide_content_text_content {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    position: relative;
+    font-size: 14px;
+    color: rgb(196, 178, 211);
+
+    @media screen and (max-width: 575px) {
+      height: 120px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #433c48;;
+      z-index: 55;
+    }
+  }
+}
+
+
+
+
+

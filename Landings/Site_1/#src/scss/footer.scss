@@ -1,0 +1,229 @@
+footer {
+  padding-top: $default-padding-global;
+  padding-bottom: $default-padding-global;
+  @media screen and (max-width: 992px) {
+    padding-top: 70px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: $default-padding-global / 2;
+    padding-bottom: $default-padding-global / 2;
+  }
+
+  h4 {
+    @media screen and (max-width: 992px) {
+      text-align: center;
+    }
+  }
+
+  h4 a {
+    font-family: $font-family;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.423em;
+    letter-spacing: 0px;
+    text-align: left;
+    text-decoration: none;
+    color: #0c0d1f;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+      color: #fa7161;
+      transition: all ease-in-out .3s;
+    }
+  }
+
+  .footer_left_p {
+    padding-top: 10px;
+    @media screen and (max-width: 992px) {
+      text-align: center;
+    }
+  }
+
+  .footer_left_p a {
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 2.27em;
+    letter-spacing: 0px;
+    color: #fa7161;
+    text-decoration: none;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+      color: #0c0d1f;
+      transition: all ease-in-out .3s;
+    }
+  }
+}
+
+.footer_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (max-width: 992px) {
+    padding-top: 50px;
+  }
+  @media screen and (max-width: 557px) {
+  }
+}
+
+.footer_menu_parts {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+  .footer_menu_title {
+    @extend .footer_menu_title-global;
+    padding-bottom: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #636477;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+      color: #fa7161;
+      transition: all ease-in-out .3s;
+    }
+  }
+
+  p {
+    font-family: "Red Hat Display", Sans-serif;
+    font-size: 18px;
+    line-height: 2.24em;
+    letter-spacing: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+
+.footer_input_block {
+
+  .footer_input_title {
+    @extend .footer_menu_title-global;
+    padding-top: 80px;
+    @media screen and (max-width: 400px) {
+      padding-top: 50px;
+    }
+  }
+
+  .footer_input {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px inset #e4e7ee;
+    padding-bottom: 10px;
+
+    input {
+      border: 0px;
+      font-family: $font-family;
+      color: #636477;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1em;
+      letter-spacing: 0px;
+      border-style: solid;
+
+      &:active, &:focus {
+        outline: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    span {
+      font-family: $font-family;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1em;
+      letter-spacing: 0px;
+      color: #fa7161;
+    }
+  }
+}
+
+
+.footer_link {
+  padding-top: 100px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .footer_author {
+    color: #fa7161;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7em;
+    transition: all ease-in-out .3s;
+    padding-right: 5px;
+
+    &:hover {
+      color: #636477;
+      transition: all ease-in-out .3s;
+    }
+  }
+
+  .privacy {
+    color: #636477;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7em;
+  }
+
+  .footer_icon {
+    svg {
+      margin-left: 30px;
+      transition: all ease-in-out .3s;
+      @media screen and (max-width: 557px) {
+        margin-left: 10px;
+      }
+      @media screen and (max-width: 400px) {
+        margin-top: 15px;
+      }
+      @media screen and (max-width: 350px) {
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+
+      &:hover {
+        fill: #fa7161;
+        transition: all ease-in-out .3s;
+      }
+    }
+  }
+}
+
+
+.footer_video {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 992px) {
+    margin: auto;
+    align-items: center;
+  }
+
+  iframe {
+    @media screen and (max-width: 400px) {
+      width: 300px;
+      height: 200px;
+    }
+  }
+}
+
+.part_privacy {
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
+}

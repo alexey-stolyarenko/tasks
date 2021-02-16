@@ -1,0 +1,197 @@
+.request__block {
+  background-color: #0c0d1f;
+  padding-top: $default-padding-global;
+  padding-bottom: $default-padding-global;
+  @media screen and (max-width: 992px){
+    padding-top: 70px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: $default-padding-global / 2 ;
+    padding-bottom: $default-padding-global / 2 ;
+  }
+
+  .request__block_left {
+    padding-right: 70px;
+    @media screen and (max-width: 1400px){
+      padding-right: 50px;
+    }
+    @media screen and (max-width: 1200px){
+      padding-right: 30px;
+    }
+    @media screen and (max-width: 350px) {
+      padding-right: 0;
+    }
+    h2 {
+      @extend .h2-title;
+      color: #fff;
+      @media screen and (max-width: 1200px) {
+        font-size: 40px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 35px;
+      }
+      @media screen and (max-width: 445px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 350px) {
+        font-size: 28px;
+      }
+    }
+
+    .request__block_left_titleP {
+      color: #fa7161;
+      font-family: $font-family;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.75em;
+      letter-spacing: 0px;
+      padding-top: 15px;
+    }
+
+    .request__block_left_aboutP {
+      @extend .p-global;
+      font-size: 21px;
+      color: #fff;
+      padding-top: 30px;
+    }
+  }
+
+  .request__block_right{
+    padding-left: 70px;
+    position: relative;
+    @media screen and (max-width: 1400px){
+      padding-left: 50px;
+    }
+    @media screen and (max-width: 1200px){
+      padding-left: 30px;
+    }
+    @media screen and (max-width: 768px){
+      padding-left: 0
+    }
+
+    #quotes {
+      opacity: .2;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .span_quotes {
+      display: block;
+      padding-top: 50px;
+      padding-left: 20px;
+      text-align: left;
+      color: #ffffff;
+      font-family: "Kalam", Sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 1.33em;
+      letter-spacing: 0px;
+      @media screen and (max-width: 768px){
+        padding-left: 0;
+        font-size: 25px;
+      }
+    }
+
+    #svg_baloon {
+      display: block;
+      margin-left: 80%;
+      margin-top: -30px;
+      @media screen and (max-width: 992px) {
+        margin-top: -120px;
+      }
+      @media screen and (max-width: 577px) {
+       width: 70px;
+        height: 70px;
+      }
+      @media screen and (max-width: 380px){
+        margin-left: 70%;
+      }
+    }
+  }
+}
+
+.request__block_clientsButton {
+  margin-top: 50px;
+  background-color: #fa7161;
+  box-sizing: border-box;
+  width: 201px;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  box-shadow: 8px 10px 15px 0px rgba(12, 13, 31, 0.14);
+  transition: all ease-in-out 0.2s;
+  text-align: center;
+
+  &:hover {
+    background-color: #fff;
+    transition: all ease-in-out 0.2s;
+  }
+
+  &:hover span {
+    transition: all ease-in-out 0.5s;
+    color: #fa7161;
+  }
+
+  span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: $font-family;
+    letter-spacing: 0px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding: 15px 30px 15px 30px !important;
+    transition: all ease-in-out 0.5s;
+  }
+}
+
+
+.request__block_right_author {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  @media screen and (max-width: 380px){
+    flex-direction: column;
+  }
+
+  .img_ava {
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+  }
+
+  .request__block_right_authorName {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 60px;
+    padding-top: 50px;
+    @media screen and (max-width: 450px) {
+      padding-left: 10px;
+      padding-top: 30px;
+    }
+
+    span {
+      color: #ffffff;
+      font-family: $font-family;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.364em;
+      letter-spacing: 0px;
+    }
+
+    p{
+      text-align: left;
+      color: #aaabb2;
+      font-family: "Red Hat Display", Sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.94em;
+      letter-spacing: 0px;
+    }
+  }
+}
+
